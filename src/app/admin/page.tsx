@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
-  Upload,
   Users,
   ShieldCheck,
   FileText,
@@ -15,18 +14,6 @@ import { useSession } from "@/components/SessionProvider";
 import { getWelcomeName } from "@/lib/session";
 
 const adminSections = [
-  {
-    title: "Document Upload",
-    description: "Upload new legal PDF gazettes and publish them with manual metadata review.",
-    href: "/admin/documents/upload",
-    icon: Upload,
-    color: "teal",
-    gradient: "from-teal-50 to-white",
-    border: "border-teal-100",
-    iconBg: "bg-teal-100/50",
-    iconColor: "text-teal-600",
-    badge: "Core",
-  },
   {
     title: "User Management",
     description: "View, activate, suspend or promote registered users.",
@@ -125,7 +112,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Navigation Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {adminSections.map(
             ({ title, description, href, icon: Icon, border, iconBg, iconColor, badge }) => (
               <Link
