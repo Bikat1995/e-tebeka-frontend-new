@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-slate-900 border-t border-slate-800 pt-16 pb-8 mt-auto flex-shrink-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           
           {/* Brand & Reliability Column */}
           <div className="md:col-span-2 space-y-6">
@@ -32,6 +32,16 @@ export default function Footer() {
               <li><Link href="/search" className="text-slate-400 hover:text-teal-400 text-sm transition-colors">Laws & Proclamations</Link></li>
               <li><Link href="/about" className="text-slate-400 hover:text-teal-400 text-sm transition-colors">About the Platform</Link></li>
               <li><Link href="/login" className="text-slate-400 hover:text-teal-400 text-sm transition-colors">Sign In</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h3>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li>support@e-tebeka.gov.et</li>
+              <li>Addis Ababa, Ethiopia</li>
+              <li>+251 11 123 4567</li>
             </ul>
           </div>
 
