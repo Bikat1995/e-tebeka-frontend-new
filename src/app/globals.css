@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #020617; /* slate-950 */
+  
+  /* E-Tebeka Design System Colors */
+  --primary-green: #1a5d3c;  /* Matches Supreme Court logo color */
+  --secondary-blue: #2c5f8d;
+  --accent-gold: #f4a261;
+  --light-gray: #f8f9fa;
+  --dark-gray: #2d3748;
+  --text-primary: #1a202c;
+  --text-secondary: #64748b;
+  --court-blue: #0f4c75;  /* Additional court-themed color */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary-green);
+  --color-secondary: var(--secondary-blue);
+  --color-accent: var(--accent-gold);
+  --color-court: var(--court-blue);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  min-height: 100vh;
+}
+
+/* Force all inputs to render typed text clearly in light theme */
+input, textarea, select {
+  color: #0f172a; /* slate-900 */
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* slate-200 */
+}
+
+input:focus, textarea:focus {
+  border-color: #14b8a6; /* teal-500 */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 93, 60, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #94a3b8; /* slate-400 */
+}
